@@ -69,7 +69,7 @@ int main() {
 	}
 
 	cout << endl;
-	// Mult Table
+	// Mult Table 1-10 mults
 	vector< vector<int> > table(11, vector<int>(11));
 	for (int row = 1; row < table.size(); row++) {
 		for (int col = 1; col < table[row].size(); col++) {
