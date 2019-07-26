@@ -54,6 +54,30 @@ int main() {
 	cout << "Capacity: " << numbers.capacity() << endl;
 
 	
+	cout << "\n\n\n";
+
+	// 2D Vectors
+	vector< vector<int> > grid(3, vector<int>(4, 7)); // Creates a vector of rows, which contains vectors of collumns
+
+	grid[1].push_back(8);
+
+	for (int row = 0; row < grid.size(); row++) {
+		for (int col = 0; col < grid[row].size(); col++) {
+			cout << grid[row][col] << flush;
+		}
+		cout << endl;
+	}
+
+	cout << endl;
+	// Mult Table
+	vector< vector<int> > table(11, vector<int>(11));
+	for (int row = 1; row < table.size(); row++) {
+		for (int col = 1; col < table[row].size(); col++) {
+			table[row][col] = row * col;
+			cout << table[row][col] << '\t';
+		}
+		cout << endl;
+	}
 
 
 	return 0;
