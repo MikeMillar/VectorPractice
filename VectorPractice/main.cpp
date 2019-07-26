@@ -29,5 +29,32 @@ int main() {
 	it3 += 2; // Moves 2 spaces forward in vector
 	cout << *it3 << endl;
 
+	vector<double> numbers(20, 0); // Sets vector of size 20 with each element initialized to 0
+	cout << "\n\n\nSize: " << numbers.size() << endl;
+	int capacity = numbers.capacity(); // Current capacity of array
+	cout << "Capacity: " << capacity << endl;
+	for (int i = 0; i < 10000; i++) { // Loops 10000 times
+		if (numbers.capacity() != capacity) { // If capacity changes, sets new capacity and outputs it
+			capacity = numbers.capacity();
+			cout << "Capacity increased to: " << capacity << endl;
+		}
+		numbers.push_back(i); // Pushes index to back of vector
+	}
+
+	numbers.reserve(20000); // Changes capacity of vector to reserve amount -- allocates memory
+	cout << "Size: " << numbers.size() << endl;
+	cout << "Capacity: " << numbers.capacity() << endl;
+
+	numbers.resize(100); // Resizes vector to 100 elements
+	cout << "Size: " << numbers.size() << endl;
+	cout << "Capacity: " << numbers.capacity() << endl;
+
+	numbers.clear(); // Deletes all elements
+	cout << "Size: " << numbers.size() << endl;
+	cout << "Capacity: " << numbers.capacity() << endl;
+
+	
+
+
 	return 0;
 }
